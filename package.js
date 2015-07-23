@@ -1,14 +1,14 @@
 Package.describe({
   name: 'johnschult:crypto-sha512',
   summary: 'SHA512 algo for CryptoJS, standard secure crypto algorithms',
-  version: '1.0.0',
+  version: '3.1.2',
   git: 'https://github.com/johnschult/meteor-crypto-sha512.git'
 });
 
 Package.onUse(function(api) {
   api.versionsFrom('0.9.0');
-  api.use('jparker:crypto-core', ['client', 'server']);
-  api.imply('jparker:crypto-core', ['client', 'server']);
+  api.use('jparker:crypto-core@0.1.0', ['client', 'server']);
+  api.imply('jparker:crypto-core@0.1.0', ['client', 'server']);
   api.addFiles('lib/cryptojs/x64-core.js', ['client', 'server']);
   api.addFiles('lib/cryptojs/sha512.js', ['client', 'server']);
 });
